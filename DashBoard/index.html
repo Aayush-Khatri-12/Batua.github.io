@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined"></span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">   notifications </span>
+          <span class="material-icons-outlined">   email </span>
+          <span class="material-icons-outlined">   account_circle </span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">wallet</span> ब·टु·आ 
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">account_balance_wallet</span> Expenditure
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="ledger/index.html" target="_blank">
+              <span class="material-icons-outlined">book</span> Ledger
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="https://discord.gg/29Sx2GXS" target="_blank">
+              <span class="material-icons-outlined">forum</span> Forum
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">payments</span> Investments
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">summarize</span> Report
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Settings
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="../index.html" target="_blank">
+              <span class="material-icons-outlined">logout</span> Log-Out
+            </a>
+          </li>
+          
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>DASHBOARD</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>BALANCE</h3>
+              <span class="material-icons-outlined">account_balance<span>
+            </div>
+            <h1>₹60000</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>EXPENSE</h3>
+              <span class="material-icons-outlined">account_balance_wallet</span>
+            </div>
+            <h1>₹24000</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>REVENUE</h3>
+              <span class="material-icons-outlined">money</span>
+            </div>
+            <h1>₹51000</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>INVESTMENTS</h3>
+              <span class="material-icons-outlined">groups</span>
+            </div>
+            <h1>₹13000</h1>
+            <h1>Gain 0.9%</h1>
+          </div>
+
+          
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">Top 5 Expenditure Categories</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title"></h2>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+      
+
+    </div>
+    
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

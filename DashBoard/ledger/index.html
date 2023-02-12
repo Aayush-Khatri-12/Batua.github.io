@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: auto;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: lightgray;
+      }
+      .input-field {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid gray;
+        border-radius: 4px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .input-group {
+        text-align: center;
+        margin: 20px 0;
+      }
+      button {
+        padding: 12px 20px;
+        border-radius: 4px;
+        background-color: lightgray;
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center;">Ledger</h2>
+    <table id="ledger">
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Debit</th>
+        <th>Credit</th>
+      </tr>
+    </table>
+    <div class="input-group">
+      <label>Date:</label>
+      <input type="text" class="input-field" id="date">
+    </div>
+    <div class="input-group">
+      <label>Description:</label>
+      <input type="text" class="input-field" id="description">
+    </div>
+    <div class="input-group">
+      <label>Debit:</label>
+      <input type="text" class="input-field" id="debit">
+    </div>
+    <div class="input-group">
+      <label>Credit:</label>
+      <input type="text" class="input-field" id="credit">
+    </div>
+    <div class="input-group">
+      <button onclick="addTransaction()">Add Transaction</button>
+    </div>
+    <script>
+      function addTransaction() {
+        var table = document.getElementById("ledger");
+        var row = table.insertRow(-1);
+        var date = row.insertCell(0);
+        var description = row.insertCell(1);
+        var debit = row.insertCell(2);
+        var credit = row.insertCell(3);
+        date.innerHTML = document.getElementById("date").value;
+        description.innerHTML = document.getElementById("description").value;
+        debit.innerHTML = document.getElementById("debit").value;
+        credit.innerHTML = document.getElementById("credit").value;
+      }
+    </script>
+  </body>
+</html>
